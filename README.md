@@ -1,46 +1,37 @@
-### DJS01: Mars Climate Orbiter Challenge
+# Mars Climate Orbiter Navigation System Simulation
 
-The Mars Climate Orbiter incident in 1999 is a stark reminder of the importance of precision in space missions, highlighting how a simple unit mismatch led to the loss of the spacecraft. This challenge seeks to simulate similar challenges in a spacecraft navigation system, emphasising the need for accuracy in calculations.
+## Overview
 
-#### Challenge Overview
+The Mars Climate Orbiter Navigation System Simulation is designed to highlight the critical importance of precision and accuracy in spacecraft navigation. Inspired by the Mars Climate Orbiter incident in 1999, this project simulates the navigation calculations necessary for space missions, emphasizing the need for correct unit usage and error handling in calculations.
 
-This challenge invites students to debug, refactor, and enhance JavaScript functions designed for determining the trajectory of a spacecraft. The initial functions are flawed and may result in incorrect calculations.
+## Purpose
 
-![alt text](mars.gif)
+This simulation aims to:
+- Demonstrate how unit mismatches can lead to significant errors in space navigation.
+- Provide a robust framework for calculating velocity, distance, and fuel consumption.
+- Implement thorough validation checks to ensure input parameters are appropriate and correctly formatted.
 
-##### Problem Areas to Address
+## Features
 
-1. **Unit Mismatch**: The provided functions fail to convert units correctly, leading to calculation inaccuracies.
-2. **Parameter Misalignment**: Parameters are not handled in a way that prevents or highlights the potential for unit mismatch errors, leading to possible confusion.
+- **Unit Conversion**: Automatically converts velocity between kilometers per hour (km/h) and meters per second (m/s) to ensure consistency in calculations.
+- **Error Handling**: Provides robust error handling for invalid inputs, such as negative values or incorrect units, preventing incorrect calculations.
+- **Calculation Functions**: 
+  - Computes new velocity based on initial velocity, acceleration, and time.
+  - Calculates the distance traveled over a specified time period.
+  - Determines the remaining fuel after accounting for the fuel burn rate over time.
+  
+## Usage
 
-##### Initial Parameters
+To use the simulation:
+1. Define initial parameters such as velocity, acceleration, time, initial distance, fuel amount, and fuel burn rate.
+2. The simulation will perform calculations to provide the new velocity, distance traveled, and remaining fuel.
+3. In case of invalid parameters, the simulation will throw meaningful error messages to guide the user.
 
-- **Initial Velocity (`vel`)**: The starting speed of the spacecraft, 10,000 km/h.
-- **Acceleration (`acc`)**: The spacecraft's acceleration, 3 m/s².
-- **Time (`time`)**: The duration of the calculation, 3,600 seconds (equivalent to 1 hour).
-- **Initial Distance (`d`)**: The starting distance from the reference point, 0 km.
-- **Initial Fuel (`fuel`)**: The starting amount of fuel, 5,000 kg.
-- **Fuel Burn Rate (`fbr`)**: The rate at which fuel is consumed, 0.5 kg/s.
+## Requirements
 
-##### Expected Corrected Results
+- JavaScript runtime (e.g., Node.js) for executing the simulation code.
+- Basic understanding of space navigation concepts and physics.
 
-- **New Velocity**: Approximately 48880 km/h after correction.
-- **New Distance**: Approximately 10000 km after correction.
-- **Remaining Fuel**: Approximately 3,200 kg after correction.
+## Conclusion
 
-#### Your Task
-
-1. **Identify and Understand Errors**: Analyse the provided functions to determine how unit mismatches and parameter misalignments cause incorrect results.
-2. **Refactor and Correct**: Modify the functions to handle parameters more effectively, incorporating object destructuring for clarity and implementing necessary unit conversions.
-
-#### Solution Approach
-
-- Use object destructuring in function parameters for better clarity.
-- Implement accurate unit conversions within the functions.
-- Ensure the corrected functions address the issues of unit mismatches and parameter clarity.
-
-#### Debugging Guide
-
-1. Enhance code readability for easier debugging.
-2. Identify and correct calculation errors.
-3. Improve the robustness of calculations. If incorrect units are used or other errors are detected, the code should notify the user instead of producing an incorrect result.
+The Mars Climate Orbiter Navigation System Simulation serves as a critical reminder of the need for accuracy in calculations during space missions. By ensuring that unit conversions and input validations are thoroughly implemented, this project aims to minimize the risk of errors that can lead to mission failures.
